@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <ctype.h>
+
+int main() {
+    char s[30];
+    int i, vowels=0, consonants=0;
+    printf ("ENTER THE STRING VALUE: ");
+    fgets (s, sizeof(s), stdin);
+    
+for (i=0; s[i] != '\0'; i++)
+{
+char ch = tolower(s[i]);
+
+if (isalpha(ch))
+{
+if (ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u')
+{
+    vowels++;
+}
+else
+{
+    consonants++;
+}
+}
+}
+printf ("vowels are: %d\n",vowels);
+printf ("consonants are: %d", consonants);
+return 0;
+}
