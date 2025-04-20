@@ -8,20 +8,24 @@ printf("Enter a number: ");
 scanf("%d", &n);
 
 printf("Prime numbers up to %d are:\n", n);
-for (i = 2; i <= n; i++)
+for (i = 2; i <= n; i++) 
 {
-p = 1;
-for (j = 2; j * j <= i; j++)
+for (j = 2; j * j <= i; j++) 
 {
 if (i % j == 0) 
 {
-p = 0;
-break;
+p = 0; 
+}
+else
+{
+p=1;
 }
 }
-if (p) {
+if (p)
+{
 printf("%d ", i);
 }
 }
+
 return 0;
 }
